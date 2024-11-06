@@ -1,0 +1,25 @@
+[project]
+name = "langchain-dev"
+version = "0.1.0"
+description = "Add your description here"
+dependencies = [
+    "langchain>=0.3.7",
+    "python-dotenv>=1.0.1",
+    "langchain-openai>=0.2.5",
+]
+readme = "README.md"
+requires-python = ">= 3.11"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/langchain_dev"]
